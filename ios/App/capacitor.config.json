@@ -1,0 +1,10 @@
+{
+	"appId": "com.gencocans.app",
+	"appName": "Genco Cans",
+	"webDir": "www",
+	"server": {
+		"url": "https://app.gencocans.com",
+		"cleartext": false
+	},
+	"packageClassList": []
+}
