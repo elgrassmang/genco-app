@@ -9,3 +9,4 @@
 
 ## Lessons
 - capacitor.config.json: www/ is a placeholder; app loads remote https://app.gencocans.com (Hostinger), not this repo
+- app.gencocans.com source is a Hostinger Horizons project (Supabase uqeofinlznwgvkyygtjk), in no GitHub repo
