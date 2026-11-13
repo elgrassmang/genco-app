@@ -1,0 +1,129 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    :root {
+      /* Brand Colors */
+      --brand-deep-red: 11 72% 34%; /* approx #8C2D25 */
+      --brand-cream: 40 50% 85%;   /* approx #F0E1C0 */
+      --brand-dark: 0 0% 0%;   /* Pure Black */
+      --brand-light-cream: 40 50% 95%; /* Lighter cream for backgrounds */
+      --brand-accent-red: 11 60% 50%; /* Brighter red for accents if needed */
+
+      /* Shadcn UI Mappings */
+      --background: var(--brand-light-cream); 
+      --foreground: var(--brand-dark);       
+
+      --card: 0 0% 100%; 
+      --card-foreground: var(--brand-dark); 
+
+      --popover: 0 0% 100%;
+      --popover-foreground: var(--brand-dark);
+
+      --primary: var(--brand-deep-red);
+      --primary-foreground: var(--brand-cream); 
+
+      --secondary: var(--brand-dark); 
+      --secondary-foreground: var(--brand-cream); 
+
+      --muted: 220 14.3% 90%; 
+      --muted-foreground: 0 0% 15%; /* Darker for better legibility in light mode */
+
+      --accent: var(--brand-accent-red); 
+      --accent-foreground: var(--brand-cream);
+
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 355.7 100% 97.3%;
+
+      --border: 220 13% 80%; 
+      --input: 0 0% 100%;  
+      --input-foreground: var(--brand-dark); 
+      --ring: var(--brand-deep-red);
+
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --brand-dark-mode-bg: 0 0% 8%; /* Slightly lighter than pure black for dark mode bg */
+      --brand-cream-dark-mode-text: 40 50% 90%; /* Slightly adjusted cream for dark mode text */
+
+      --background: var(--brand-dark-mode-bg);       
+      --foreground: var(--brand-cream-dark-mode-text);     
+
+      --card: 20 10% 15%; 
+      --card-foreground: var(--brand-cream-dark-mode-text);
+
+      --popover: var(--brand-dark-mode-bg);
+      --popover-foreground: var(--brand-cream-dark-mode-text);
+
+      --primary: var(--brand-accent-red); 
+      --primary-foreground: var(--brand-cream-dark-mode-text);
+
+      --secondary: var(--brand-cream-dark-mode-text); 
+      --secondary-foreground: var(--brand-dark-mode-bg); 
+      
+      --muted: 220 13% 25%;
+      --muted-foreground: 220 8.9% 75%; /* Lighter for better legibility in dark mode */
+
+      --accent: var(--brand-deep-red);
+      --accent-foreground: var(--brand-cream-dark-mode-text);
+      
+      --border: 220 13% 35%; 
+      --input: 220 13% 20%; 
+      --input-foreground: var(--brand-cream-dark-mode-text); 
+      --ring: var(--brand-accent-red);
+    }
+    
+    body {
+      @apply bg-background text-foreground;
+      font-family: 'Inter', sans-serif; 
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, hsl(var(--brand-deep-red)) 0%, hsl(var(--brand-accent-red)) 60%, hsl(var(--brand-cream)) 100%);
+    }
+    
+    .auth-gradient-bg {
+       background: linear-gradient(135deg, hsl(var(--brand-deep-red) / 0.95) 0%, hsl(var(--brand-dark)) 100%);
+    }
+
+    .dark .auth-gradient-bg {
+       background: linear-gradient(135deg, hsl(var(--brand-deep-red) / 0.95) 0%, hsl(var(--brand-dark-mode-bg)) 100%);
+    }
+
+    .glassmorphism {
+      background: hsl(var(--card) / 0.65); /* Increased opacity for light mode */
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid hsl(var(--border) / 0.3); 
+    }
+    
+    .dark .glassmorphism {
+       background: hsl(var(--brand-dark-mode-bg) / 0.5); /* Adjusted opacity for dark mode */
+       border: 1px solid hsl(var(--brand-cream-dark-mode-text) / 0.15); 
+    }
+    
+    .plan-card-grid .flex.flex-col {
+        height: 100%; 
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: hsl(var(--background) / 0.5); 
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: hsl(var(--primary) / 0.7); 
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: hsl(var(--primary)); 
+    }
+
+    .admin-main-content {
+    }

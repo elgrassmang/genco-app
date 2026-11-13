@@ -9,4 +9,5 @@
 
 ## Lessons
 - capacitor.config.json: www/ is a placeholder; app loads remote https://app.gencocans.com (Hostinger), not this repo
-- app.gencocans.com source is a Hostinger Horizons project (Supabase uqeofinlznwgvkyygtjk), in no GitHub repo
+- app.gencocans.com source: Horizons export now in web/ (Supabase uqeofinlznwgvkyygtjk); build from web/apps/web
+- web/: root `bun run build` recurses forever under bun (E2BIG); run `npx vite build` in web/apps/web
